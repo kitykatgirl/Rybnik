@@ -5,9 +5,9 @@ public class Ryba {
     int sposobZyienia;
     int dlugosc;
     boolean okresOchronny;
-    double waga;
+    int waga;
 
-    public Ryba(String nazwaGatunku, int sposobZyienia, int dlugosc, boolean okresOchronny, double waga) {
+    public Ryba(String nazwaGatunku, int sposobZyienia, int dlugosc, boolean okresOchronny, int waga) {
         this.nazwaGatunku = nazwaGatunku;
         this.sposobZyienia = sposobZyienia;
         this.dlugosc = dlugosc;
@@ -17,12 +17,25 @@ public class Ryba {
 
     @Override
     public String toString() {
-        return "Ryba{" +
-                "nazwaGatunku='" + nazwaGatunku + '\'' +
-                ", sposobZyienia=" + sposobZyienia +
-                ", dlugosc=" + dlugosc +
-                ", okresOchronny=" + okresOchronny +
-                ", waga=" + waga +
-                '}';
+        String sposob;
+        switch (sposobZyienia){
+            case 1:{
+                sposob = "roslinozerne";
+                break;
+            }
+            case 2:{
+                sposob = "wszystkozerne";
+                break;
+            }
+            default:{
+                sposob = "drapiezne";
+            }
+        }
+        if (okresOchronny){
+            return "Nazwa gatunku: " + nazwaGatunku + " | Sposob Zywienia: " + sposob + " | Dlugosc: " + dlugosc + "cm | Waga: " + waga + "g | Podczas Okresu Ochronnego";
+        }
+        else {
+            return "Nazwa gatunku: " + nazwaGatunku + " | Sposob Zywienia: " + sposob + " | Dlugosc: " + dlugosc + "cm | Waga: " + waga + "g";
+        }
     }
 }

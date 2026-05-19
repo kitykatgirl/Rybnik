@@ -29,28 +29,10 @@
         android:layout_height="wrap_content"
         android:text="Sposob zywienia" />
 
-    <RadioGroup
+    <Spinner
+        android:id="@+id/spinner"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
-
-        <RadioButton
-            android:id="@+id/radioButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="roslinozerne" />
-
-        <RadioButton
-            android:id="@+id/radioButton2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="wszystkozerne" />
-
-        <RadioButton
-            android:id="@+id/radioButton3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="drapiezne" />
-    </RadioGroup>
+        android:layout_height="wrap_content" />
 
     <TextView
         android:id="@+id/textViewDlugosc"
@@ -61,15 +43,15 @@
     <SeekBar
         android:id="@+id/seekBar"
         android:min="1"
-        android:max="100"
+        android:max="250"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
-    <CheckBox
-        android:id="@+id/checkBox"
+    <Switch
+        android:id="@+id/switch1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="czy okres ochronny" />
+        android:text="Czy Okres Ochronny" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -81,7 +63,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Waga:" />
+            android:text="Waga [g]:" />
 
         <EditText
             android:id="@+id/editTextWaga"
